@@ -1,7 +1,7 @@
 const http = require('http');
 const app = require('./app');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 // Configuration du port
 app.set('port', port);
@@ -36,4 +36,6 @@ server.on('listening', () => {
 });
 
 // Démarrage du serveur
-server.listen(port);
+server.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+} );
