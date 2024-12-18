@@ -3,14 +3,14 @@ const app = require('./app');
 
 const port = process.env.PORT || 3000;
 
+// Configuration du port
 app.set('port', port);
 
-const errorHandler = error => {
+const errorHandler = (error) => {
   if (error.syscall !== 'listen') {
     throw error;
   }
-  const address = server.address();
-  const bind = typeof address === 'string' ? 'pipe ' + address : 'port: ' + port;
+  const bind = typeof port === 'string' ? 'pipe ' + port : 'port: ' + port;
   switch (error.code) {
     case 'EACCES':
       console.error(bind + ' requires elevated privileges.');
@@ -28,10 +28,12 @@ const errorHandler = error => {
 const server = http.createServer(app);
 
 server.on('error', errorHandler);
+
 server.on('listening', () => {
   const address = server.address();
   const bind = typeof address === 'string' ? 'pipe ' + address : 'port ' + port;
   console.log('Listening on ' + bind);
 });
 
+// Démarrage du serveur
 server.listen(port);
