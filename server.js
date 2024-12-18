@@ -35,7 +35,3 @@ server.on('listening', () => {
   console.log('Listening on ' + bind);
 });
 
-// Démarrage du serveur
-server.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-} );
