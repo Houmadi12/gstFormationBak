@@ -1,7 +1,7 @@
 const http = require('http');
 const app = require('./app');
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 
 // Configuration du port
 app.set('port', port);
@@ -35,3 +35,4 @@ server.on('listening', () => {
   console.log('Listening on ' + bind);
 });
 
+server.listen(port);
