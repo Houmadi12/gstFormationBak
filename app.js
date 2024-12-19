@@ -17,7 +17,7 @@ const swaggerOptions = {
       description: "API documentation avec Swagger"
     },
     servers: [
-      { url: "https://gstformationbak-2-qwl2.onrender.com" } // Base URL de l'API
+      { url: "https://gstformationbak-nilw.onrender.com" } // Base URL de l'API
     ],
     components: {
       schemas: {
